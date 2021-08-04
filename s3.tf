@@ -1,48 +1,9 @@
-resource "aws_s3_bucket" "data" {
-  # bucket is public
-  # bucket is not encrypted
-  # bucket does not have access logs
-  # bucket does not have versioning
-  bucket        = "${local.resource_prefix.value}-data"
-  acl           = "public-read"
-  force_destroy = true
-}
-
-resource "aws_s3_bucket" "financials" {
-  # bucket is not encrypted
-  # bucket does not have access logs
-  # bucket does not have versioning
-  bucket        = "${local.resource_prefix.value}-financials"
-  acl           = "private"
-  force_destroy = true
-}
-
-resource "aws_s3_bucket" "operations" {
-  # bucket is not encrypted
-  # bucket does not have access logs
-  bucket = "${local.resource_prefix.value}-operations"
-  acl    = "private"
-  versioning {
-    enabled = true
-  }
-  force_destroy = true
-}
-
-resource "aws_s3_bucket" "data_science" {
-  # bucket is not encrypted
-  bucket = "${local.resource_prefix.value}-data-science"
-  acl    = "private"
-  versioning {
-    enabled = true
-  }
-  logging {
-    target_bucket = "${aws_s3_bucket.logs.id}"
-    target_prefix = "log/"
-  }
-}
-
-resource "aws_s3_bucket" "logs" {
-  bucket = "${local.resource_prefix.value}-logs"
-  acl    = "log-delivery-write"
-  force_destroy = true
-}
+  1 module "s3_bucket" {
+  2   # source = "git::ssh://git@github.com/cloudposse/terraform-aws-lb-s3-bucket.gi    t"
+  3   source = "git::https://github.com/cloudposse/terraform-aws-lb-s3-bucket.git"
+  4   # Cloud Posse recommends pinning every module to a specific version
+  5   # version     = "x.x.x"
+  6   namespace = "eg"
+  7   stage     = "test"
+  8   name      = "bucket"
+  9 }
