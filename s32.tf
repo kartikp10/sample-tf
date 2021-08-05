@@ -1,4 +1,4 @@
-module "s3_bucket" {
+module "s3_bucket_2" {
   # source = "git::ssh://git@github.com/cloudposse/terraform-aws-lb-s3-bucket.git"
   # source = "git::https://github.com/cloudposse/terraform-aws-lb-s3-bucket.git"
   source = "git@github.com:cloudposse/terraform-aws-lb-s3-bucket.git"
