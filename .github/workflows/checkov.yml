@@ -30,4 +30,3 @@ jobs:
           skip_check: CKV2_AWS_6,CK2_AWS_145 # optional: skip a specific check_id. can be comma separated list
           quiet: true # optional: display only failed checks
           soft_fail: true # optional: do not return an error code if there are failed checks
-          log_level: DEBUG # optional: set log level. Default WARNING
