@@ -27,6 +27,7 @@ jobs:
         uses: bridgecrewio/checkov-action@master
         with:
           directory: "."
+          api-key: ${{ secrets.API_KEY }}
           skip_check: CKV2_AWS_6,CK2_AWS_145 # optional: skip a specific check_id. can be comma separated list
           quiet: true # optional: display only failed checks
           soft_fail: true # optional: do not return an error code if there are failed checks
