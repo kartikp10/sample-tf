@@ -22,7 +22,7 @@ jobs:
       with:
         api-key: ${{ secrets.API_KEY }}
         soft_fail: true
-        output-format: sarif
+        output_format: sarif
       env:  
         GITHUB_REPOSITORY: ${{ github.repository }}
         GITHUB_REF: ${{ github.ref }}
