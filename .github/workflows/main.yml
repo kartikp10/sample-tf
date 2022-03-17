@@ -39,3 +39,16 @@ jobs:
       with:
         # Path to SARIF file relative to the root of the repository
         sarif_file: results.sarif
+   pccs:  
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Run Bridgecrew 
+        id: Bridgecrew
+        uses: bridgecrewio/bridgecrew-action@master 
+        env:
+          PRISMA_API_URL: https://api0.prismacloud.io
+        with:
+          api-key: ${{ secrets.BC_API_KEY }}
