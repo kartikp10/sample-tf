@@ -1,0 +1,868 @@
+2022-03-04 11:28:23,202 [MainThread  ] [DEBUG]  Checkov version: 2.0.917
+2022-03-04 11:28:23,202 [MainThread  ] [DEBUG]  Python executable: /Users/kpande/.pyenv/versions/3.7.10/bin/python3.7
+2022-03-04 11:28:23,202 [MainThread  ] [DEBUG]  Python version: 3.7.10 (default, Apr 28 2021, 09:30:43) 
+[Clang 12.0.5 (clang-1205.0.22.9)]
+2022-03-04 11:28:23,202 [MainThread  ] [DEBUG]  Checkov executable (argv[0]): /Users/kpande/.pyenv/versions/3.7.10/bin/checkov
+2022-03-04 11:28:23,202 [MainThread  ] [DEBUG]  Command Line Args:   -d .
+Defaults:
+  --framework:       ['all']
+  --branch:          master
+  --download-external-modules:False
+  --external-modules-download-path:.external_modules
+  --evaluate-variables:True
+
+2022-03-04 11:28:23,203 [MainThread  ] [INFO ]  Resultant set of frameworks (removing skipped frameworks): all
+2022-03-04 11:28:23,203 [MainThread  ] [DEBUG]  terraform_runner declares no system dependency checks required.
+2022-03-04 11:28:23,203 [MainThread  ] [DEBUG]  cloudformation_runner declares no system dependency checks required.
+2022-03-04 11:28:23,203 [MainThread  ] [DEBUG]  kubernetes_runner declares no system dependency checks required.
+2022-03-04 11:28:23,203 [MainThread  ] [DEBUG]  serverless_runner declares no system dependency checks required.
+2022-03-04 11:28:23,203 [MainThread  ] [DEBUG]  arm_runner declares no system dependency checks required.
+2022-03-04 11:28:23,203 [MainThread  ] [DEBUG]  terraform_plan_runner declares no system dependency checks required.
+2022-03-04 11:28:23,203 [MainThread  ] [INFO ]  Checking necessary system dependancies for helm checks.
+2022-03-04 11:28:23,209 [MainThread  ] [INFO ]  Error running necessary tools to process helm checks.
+2022-03-04 11:28:23,210 [MainThread  ] [DEBUG]  dockerfile_runner declares no system dependency checks required.
+2022-03-04 11:28:23,210 [MainThread  ] [DEBUG]  secrets_runner declares no system dependency checks required.
+2022-03-04 11:28:23,210 [MainThread  ] [DEBUG]  json_runner declares no system dependency checks required.
+2022-03-04 11:28:23,210 [MainThread  ] [DEBUG]  yaml_runner declares no system dependency checks required.
+2022-03-04 11:28:23,211 [MainThread  ] [DEBUG]  github_configuration_runner declares no system dependency checks required.
+2022-03-04 11:28:23,211 [MainThread  ] [DEBUG]  gitlab_configuration_runner declares no system dependency checks required.
+2022-03-04 11:28:23,211 [MainThread  ] [DEBUG]  bitbucket_configuration_runner declares no system dependency checks required.
+2022-03-04 11:28:23,211 [MainThread  ] [INFO ]  Checking necessary system dependancies for kustomize checks.
+2022-03-04 11:28:23,288 [MainThread  ] [INFO ]  Found working version of kustomize dependancy kubectl: 1.21
+2022-03-04 11:28:23,289 [MainThread  ] [DEBUG]  sca_package_runner declares no system dependency checks required.
+2022-03-04 11:28:23,289 [MainThread  ] [DEBUG]  github_actions_runner declares no system dependency checks required.
+2022-03-04 11:28:23,289 [MainThread  ] [INFO ]  The following frameworks will automatically be disabled due to missing system dependencies: helm
+2022-03-04 11:28:23,290 [MainThread  ] [DEBUG]  No API key found. Scanning locally only.
+2022-03-04 11:28:23,477 [MainThread  ] [DEBUG]  Got checkov mappings and guidelines from Bridgecrew BE
+2022-03-04 11:28:23,477 [MainThread  ] [INFO ]  Loading external checks from /Users/kpande/.local/lib/python3.7/site-packages/checkov/terraform/checks/graph_checks
+2022-03-04 11:28:23,478 [MainThread  ] [INFO ]  Searching through ['azure', '__pycache__', 'gcp', 'aws'] and ['__init__.py']
+2022-03-04 11:28:23,478 [MainThread  ] [INFO ]  Searching through [] and ['AzureActiveDirectoryAdminIsConfigured.yaml', 'AzureAntimalwareIsConfiguredWithAutoUpdatesForVMs.yaml', 'MSQLenablesCustomerManagedKey.yaml', 'AzureSynapseWorkspacesHaveNoIPFirewallRulesAttached.yaml', 'StorageCriticalDataEncryptedCMK.yaml', 'AzureStorageAccountsUseCustomerManagedKeyForEncryption.yaml', 'VMHasBackUpMachine.yaml', 'VirtualMachinesUtilizingManagedDisks.yaml', 'DataExplorerEncryptionUsesCustomKey.yaml', 'SQLServerAuditingEnabled.yaml', 'SQLServerAuditingRetention90Days.yaml', 'StorageContainerActivityLogsNotPublic.yaml', 'AzureUnattachedDisksAreEncrypted.yaml', 'AzureDataFactoriesEncryptedWithCustomerManagedKey.yaml', 'VAsetPeriodicScansOnSQL.yaml', 'VAconfiguredToSendReports.yaml', 'StorageLoggingIsEnabledForTableService.yaml', 'PGSQLenablesCustomerManagedKey.yaml', 'AzureMSSQLServerHasSecurityAlertPolicy.yaml', 'StorageLoggingIsEnabledForBlobService.yaml', 'AzureNetworkInterfacePublicIPAddressId.yaml', 'AccessToPostgreSQLFromAzureServicesIsDisabled.yaml', 'CognitiveServicesCustomerManagedKey.yaml', 'VAconfiguredToSendReportsToAdmins.yaml', 'VAisEnabledInStorageAccount.yaml']
+2022-03-04 11:28:23,578 [MainThread  ] [INFO ]  Searching through [] and ['__init__.cpython-37.pyc']
+2022-03-04 11:28:23,578 [MainThread  ] [INFO ]  Searching through [] and ['GCPKMSCryptoKeysAreNotPubliclyAccessible.yaml', 'GCPLogBucketsConfiguredUsingLock.yaml', 'GCPAuditLogsConfiguredForAllServicesAndUsers.yaml', 'GCPKMSKeyRingsAreNotPubliclyAccessible.yaml', 'GCPProjectHasNoLegacyNetworks.yaml', 'ServiceAccountHasGCPmanagedKey.yaml', 'DisableAccessToSqlDBInstanceForRootUsersWithoutPassword.yaml', 'GCPContainerRegistryReposAreNotPubliclyAccessible.yaml', 'GKEClustersAreNotUsingDefaultServiceAccount.yaml']
+2022-03-04 11:28:23,624 [MainThread  ] [INFO ]  Searching through [] and ['GuardDutyIsEnabled.yaml', 'AppSyncProtectedByWAF.yaml', 'SGAttachedToResource.yaml', 'WAF2HasLogs.yaml', 'SubnetHasACL.yaml', 'EIPAllocatedToVPCAttachedEC2.yaml', 'EncryptedEBSVolumeOnlyConnectedToEC2s.yaml', 'CloudtrailHasCloudwatch.yaml', 'AWSNATGatewaysshouldbeutilized.yaml', 'APIGWLoggingLevelsDefinedProperly.yaml', 'AutoScalingEnableOnDynamoDBTables.yaml', 'CloudFrontHasSecurityHeadersPolicy.yaml', 'VPCHasRestrictedSG.yaml', 'AutoScallingEnabledELB.yaml', 'ALBRedirectsHTTPToHTTPS.yaml', 'VPCHasFlowLog.yaml', 'AMRClustersNotOpenToInternet.yaml', 'AWSSSMParameterShouldBeEncrypted.yaml', 'PostgresDBHasQueryLoggingEnabled.yaml', 'PostgresRDSHasQueryLoggingEnabled.yaml', 'Route53ARecordAttachedResource.yaml', 'APIProtectedByWAF.yaml', 'IAMUserHasNoConsoleAccess.yaml', 'IAMUsersAreMembersAtLeastOneGroup.yaml', 'ALBProtectedByWAF.yaml', 'HTTPNotSendingPasswords.yaml', 'S3BucketHasPublicAccessBlock.yaml', 'IAMGroupHasAtLeastOneUser.yaml', 'RDSClusterHasBackupPlan.yaml', 'EFSAddedBackup.yaml', 'EBSAddedBackup.yaml']
+2022-03-04 11:28:23,767 [MainThread  ] [INFO ]  Scanning root folder and producing fresh tf_definitions and context
+2022-03-04 11:28:23,769 [MainThread  ] [INFO ]  Parsing HCL files in source dir
+2022-03-04 11:28:23,777 [MainThread  ] [DEBUG]  Parsed file ./policies/bc_aws_c_001.yaml incorrectly {}
+2022-03-04 11:28:23,780 [MainThread  ] [INFO ]  creating cloudformation graph
+2022-03-04 11:28:23,779 [MainThread  ] [INFO ]  creating kubernetes graph
+2022-03-04 11:28:23,782 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 0 vertices
+2022-03-04 11:28:23,783 [MainThread  ] [INFO ]  Loading external checks from /Users/kpande/.local/lib/python3.7/site-packages/checkov/kubernetes/checks/graph_checks
+2022-03-04 11:28:23,783 [MainThread  ] [INFO ]  [CloudformationLocalGraph] created 0 edges
+2022-03-04 11:28:23,784 [MainThread  ] [INFO ]  Rendering variables, graph has 0 vertices and 0 edges
+2022-03-04 11:28:23,785 [MainThread  ] [INFO ]  Searching through ['__pycache__'] and ['__init__.py']
+2022-03-04 11:28:23,786 [MainThread  ] [INFO ]  Searching through [] and ['__init__.cpython-37.pyc']
+2022-03-04 11:28:23,786 [MainThread  ] [INFO ]  done evaluating edges
+2022-03-04 11:28:23,785 [MainThread  ] [DEBUG]  The runner requires that external checks are defined.
+2022-03-04 11:28:23,787 [MainThread  ] [INFO ]  done evaluate_non_rendered_values
+2022-03-04 11:28:23,788 [MainThread  ] [INFO ]  Secrets scanning will scan 4 files
+2022-03-04 11:28:23,789 [MainThread  ] [INFO ]  Loading external checks from /Users/kpande/.local/lib/python3.7/site-packages/checkov/cloudformation/checks/graph_checks
+2022-03-04 11:28:23,789 [MainThread  ] [DEBUG]  The runner requires that external checks are defined.
+2022-03-04 11:28:23,791 [MainThread  ] [INFO ]  Searching through ['__pycache__'] and ['__init__.py']
+2022-03-04 11:28:23,792 [MainThread  ] [INFO ]  Searching through [] and ['__init__.cpython-37.pyc']
+--- Logging error ---
+2022-03-04 11:28:23,795 [MainThread  ] [DEBUG]  Parsing /Users/kpande/dev/sample-tf/s3.tf
+2022-03-04 11:28:23,800 [MainThread  ] [INFO ]  creating kubernetes graph
+2022-03-04 11:28:23,803 [MainThread  ] [INFO ]  Loading external checks from /Users/kpande/.local/lib/python3.7/site-packages/checkov/kubernetes/checks/graph_checks
+Traceback (most recent call last):
+  File "/Users/kpande/.local/lib/python3.7/site-packages/checkov/common/vcs/vcs_schema.py", line 13, in validate
+    validate(instance=data, schema=self.schema)
+  File "/Users/kpande/.local/lib/python3.7/site-packages/jsonschema/validators.py", line 899, in validate
+    raise error
+jsonschema.exceptions.ValidationError: None is not of type 'object'
+
+Failed validating 'type' in schema:
+    {'properties': {'data': {'properties': {'organization': {'properties': {'description': {'type': 'string'},
+                                                                            'ipAllowListEnabledSetting': {'type': 'string'},
+                                                                            'ipAllowListForInstalledAppsEnabledSetting': {'type': 'string'},
+                                                                            'login': {'type': 'string'},
+                                                                            'name': {'type': 'string'},
+                                                                            'requiresTwoFactorAuthentication': {'type': 'boolean'},
+                                                                            'samlIdentityProvider': {'properties': {'ssoUrl': {'type': 'string'}},
+                                                                                                     'type': 'object'}},
+                                                             'required': ['name',
+                                                                          'login',
+                                                                          'description',
+                                                                          'ipAllowListEnabledSetting',
+                                                                          'ipAllowListForInstalledAppsEnabledSetting',
+                                                                          'requiresTwoFactorAuthentication'],
+                                                             'type': 'object'}},
+                             'required': ['organization'],
+                             'type': 'object'}},
+     'required': ['data'],
+     'type': 'object'}
+
+On instance:
+    None
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/kpande/.pyenv/versions/3.7.10/lib/python3.7/logging/__init__.py", line 1025, in emit
+    msg = self.format(record)
+  File "/Users/kpande/.pyenv/versions/3.7.10/lib/python3.7/logging/__init__.py", line 869, in format
+    return fmt.format(record)
+  File "/Users/kpande/.pyenv/versions/3.7.10/lib/python3.7/logging/__init__.py", line 608, in format
+    record.message = record.getMessage()
+  File "/Users/kpande/.pyenv/versions/3.7.10/lib/python3.7/logging/__init__.py", line 369, in getMessage
+    msg = msg % self.args
+TypeError: not all arguments converted during string formatting
+Call stack:
+2022-03-04 11:28:23,810 [MainThread  ] [INFO ]  Searching through ['__pycache__'] and ['__init__.py']
+2022-03-04 11:28:23,812 [MainThread  ] [INFO ]  Searching through [] and ['__init__.cpython-37.pyc']
+2022-03-04 11:28:23,813 [MainThread  ] [DEBUG]  Sucessfully ran k8s scan on Kustomization templated files in tmp scan dir : /var/folders/dq/ty1f8lrj4ls91nm4fd4nh_4dpzbr5s/T/tmplktrenba
+2022-03-04 11:28:23,815 [MainThread  ] [DEBUG]  Parsing /Users/kpande/dev/sample-tf/providers.tf
+2022-03-04 11:28:23,817 [MainThread  ] [DEBUG]  Parsing /Users/kpande/dev/sample-tf/consts.tf
+  File "/Users/kpande/.pyenv/versions/3.7.10/bin/checkov", line 9, in <module>
+    sys.exit(run())
+  File "/Users/kpande/.local/lib/python3.7/site-packages/checkov/main.py", line 231, in run
+    files=file)
+  File "/Users/kpande/.local/lib/python3.7/site-packages/checkov/common/runners/runner_registry.py", line 70, in run
+    for scan_report in reports:
+  File "/Users/kpande/.local/lib/python3.7/site-packages/checkov/common/parallelizer/parallel_runner.py", line 39, in _run_function_multiprocess
+    process.start()
+  File "/Users/kpande/.pyenv/versions/3.7.10/lib/python3.7/multiprocessing/process.py", line 112, in start
+    self._popen = self._Popen(self)
+  File "/Users/kpande/.pyenv/versions/3.7.10/lib/python3.7/multiprocessing/context.py", line 277, in _Popen
+    return Popen(process_obj)
+  File "/Users/kpande/.pyenv/versions/3.7.10/lib/python3.7/multiprocessing/popen_fork.py", line 20, in __init__
+    self._launch(process_obj)
+  File "/Users/kpande/.pyenv/versions/3.7.10/lib/python3.7/multiprocessing/popen_fork.py", line 74, in _launch
+    code = process_obj._bootstrap()
+  File "/Users/kpande/.pyenv/versions/3.7.10/lib/python3.7/multiprocessing/process.py", line 297, in _bootstrap
+    self.run()
+  File "/Users/kpande/.pyenv/versions/3.7.10/lib/python3.7/multiprocessing/process.py", line 99, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/kpande/.local/lib/python3.7/site-packages/checkov/common/parallelizer/parallel_runner.py", line 29, in func_wrapper
+    result = original_func(item)
+  File "/Users/kpande/.local/lib/python3.7/site-packages/checkov/common/runners/runner_registry.py", line 67, in <lambda>
+    runner_filter=self.runner_filter, collect_skip_comments=collect_skip_comments),
+  File "/Users/kpande/.local/lib/python3.7/site-packages/checkov/github/runner.py", line 16, in run
+    self.prepare_data()
+  File "/Users/kpande/.local/lib/python3.7/site-packages/checkov/github/runner.py", line 25, in prepare_data
+    self.github.persist_all_confs()
+  File "/Users/kpande/.local/lib/python3.7/site-packages/checkov/github/dal.py", line 83, in persist_all_confs
+    self.persist_organization_security()
+  File "/Users/kpande/.local/lib/python3.7/site-packages/checkov/github/dal.py", line 56, in persist_organization_security
+    organization_security = self.get_organization_security()
+  File "/Users/kpande/.local/lib/python3.7/site-packages/checkov/github/dal.py", line 77, in get_organization_security
+    if org_security_schema.validate(data):
+  File "/Users/kpande/.local/lib/python3.7/site-packages/checkov/common/vcs/vcs_schema.py", line 15, in validate
+    logging.debug("validation error {}", e)
+2022-03-04 11:28:23,821 [MainThread  ] [DEBUG]  Module load loop 0
+Message: 'validation error {}'
+Arguments: (<ValidationError: "None is not of type 'object'">,)
+2022-03-04 11:28:23,824 [MainThread  ] [DEBUG]  Module load loop 0
+2022-03-04 11:28:23,830 [MainThread  ] [INFO ]  Building graph from parsed module
+2022-03-04 11:28:23,831 [MainThread  ] [INFO ]  Creating vertices
+2022-03-04 11:28:23,833 [MainThread  ] [INFO ]  Creating edges
+2022-03-04 11:28:23,836 [MainThread  ] [INFO ]  Rendering variables, graph has 10 vertices and 9 edges
+2022-03-04 11:28:23,838 [MainThread  ] [INFO ]  evaluating 3 edges
+2022-03-04 11:28:23,840 [MainThread  ] [INFO ]  evaluating 5 edges
+2022-03-04 11:28:23,843 [MainThread  ] [INFO ]  evaluating 1 edges
+2022-03-04 11:28:23,844 [MainThread  ] [INFO ]  evaluating 5 edges
+2022-03-04 11:28:23,845 [MainThread  ] [INFO ]  evaluating 1 edges
+2022-03-04 11:28:23,846 [MainThread  ] [INFO ]  evaluating 5 edges
+2022-03-04 11:28:23,848 [MainThread  ] [INFO ]  evaluating 1 edges
+2022-03-04 11:28:23,849 [MainThread  ] [INFO ]  Reached too many edge duplications of 90% for 4 iterations. breaking.
+2022-03-04 11:28:23,850 [MainThread  ] [INFO ]  done evaluating edges
+2022-03-04 11:28:23,853 [MainThread  ] [INFO ]  done evaluate_non_rendered_values
+2022-03-04 11:28:23,857 [MainThread  ] [DEBUG]  created context for aws_caller_identity current
+2022-03-04 11:28:23,858 [MainThread  ] [DEBUG]  created context for 
+2022-03-04 11:28:23,860 [MainThread  ] [DEBUG]  created context for company_name
+2022-03-04 11:28:23,861 [MainThread  ] [DEBUG]  created context for environment
+2022-03-04 11:28:23,863 [MainThread  ] [DEBUG]  created context for aws default
+2022-03-04 11:28:23,864 [MainThread  ] [DEBUG]  created context for aws_s3_bucket data
+2022-03-04 11:28:23,865 [MainThread  ] [DEBUG]  created context for aws_s3_bucket financials
+2022-03-04 11:28:23,866 [MainThread  ] [DEBUG]  created context for aws_s3_bucket operations
+2022-03-04 11:28:23,867 [MainThread  ] [DEBUG]  created context for aws_s3_bucket data_science
+2022-03-04 11:28:23,868 [MainThread  ] [DEBUG]  created context for aws_s3_bucket logs
+2022-03-04 11:28:23,869 [MainThread  ] [DEBUG]  Created definitions context
+2022-03-04 11:28:23,870 [MainThread  ] [DEBUG]  Scanning file: /consts.tf
+2022-03-04 11:28:23,871 [MainThread  ] [DEBUG]  Scanning file: /providers.tf
+2022-03-04 11:28:23,872 [MainThread  ] [DEBUG]  Running check: Ensure no hard coded AWS access key and secret key exists in provider on file /providers.tf
+2022-03-04 11:28:23,872 [MainThread  ] [DEBUG]  File /providers.tf, provider  "aws.aws" check "Ensure no hard coded AWS access key and secret key exists in provider" Result: {'result': <CheckResult.PASSED: 'PASSED'>, 'evaluated_keys': []} 
+2022-03-04 11:28:23,874 [MainThread  ] [DEBUG]  Scanning file: /s3.tf
+2022-03-04 11:28:23,874 [MainThread  ] [DEBUG]  Running check: Ensure all data stored in the S3 bucket is securely encrypted at rest on file /s3.tf
+2022-03-04 11:28:23,877 [MainThread  ] [DEBUG]  File /s3.tf, resource  "aws_s3_bucket.data" check "Ensure all data stored in the S3 bucket is securely encrypted at rest" Result: {'result': <CheckResult.FAILED: 'FAILED'>, 'evaluated_keys': ['server_side_encryption_configuration/[0]/rule/[0]/apply_server_side_encryption_by_default/[0]/sse_algorithm']} 
+2022-03-04 11:28:23,877 [MainThread  ] [DEBUG]  Running check: Ensure that S3 bucket has lock configuration enabled by default on file /s3.tf
+2022-03-04 11:28:23,878 [MainThread  ] [DEBUG]  File /s3.tf, resource  "aws_s3_bucket.data" check "Ensure that S3 bucket has lock configuration enabled by default" Result: {'result': <CheckResult.UNKNOWN: 'UNKNOWN'>, 'evaluated_keys': ['object_lock_configuration/[0]/object_lock_enabled']} 
+2022-03-04 11:28:23,879 [MainThread  ] [DEBUG]  Running check: S3 Bucket has an ACL defined which allows public READ access. on file /s3.tf
+2022-03-04 11:28:23,880 [MainThread  ] [DEBUG]  File /s3.tf, resource  "aws_s3_bucket.data" check "S3 Bucket has an ACL defined which allows public READ access." Result: {'result': <CheckResult.FAILED: 'FAILED'>, 'evaluated_keys': ['acl']} 
+2022-03-04 11:28:23,880 [MainThread  ] [DEBUG]  Running check: Ensure the S3 bucket has access logging enabled on file /s3.tf
+2022-03-04 11:28:23,881 [MainThread  ] [DEBUG]  File /s3.tf, resource  "aws_s3_bucket.data" check "Ensure the S3 bucket has access logging enabled" Result: {'result': <CheckResult.FAILED: 'FAILED'>, 'evaluated_keys': ['logging']} 
+2022-03-04 11:28:23,882 [MainThread  ] [DEBUG]  Running check: Ensure that S3 bucket has cross-region replication enabled on file /s3.tf
+2022-03-04 11:28:23,883 [MainThread  ] [DEBUG]  File /s3.tf, resource  "aws_s3_bucket.data" check "Ensure that S3 bucket has cross-region replication enabled" Result: {'result': <CheckResult.FAILED: 'FAILED'>, 'evaluated_keys': ['replication_configuration/[0]/role']} 
+2022-03-04 11:28:23,884 [MainThread  ] [DEBUG]  Running check: Ensure S3 bucket does not allow an action with any Principal on file /s3.tf
+2022-03-04 11:28:23,884 [MainThread  ] [DEBUG]  File /s3.tf, resource  "aws_s3_bucket.data" check "Ensure S3 bucket does not allow an action with any Principal" Result: {'result': <CheckResult.PASSED: 'PASSED'>, 'evaluated_keys': ['policy']} 
+2022-03-04 11:28:23,885 [MainThread  ] [DEBUG]  Running check: Ensure that S3 buckets are encrypted with KMS by default on file /s3.tf
+2022-03-04 11:28:23,886 [MainThread  ] [DEBUG]  File /s3.tf, resource  "aws_s3_bucket.data" check "Ensure that S3 buckets are encrypted with KMS by default" Result: {'result': <CheckResult.FAILED: 'FAILED'>, 'evaluated_keys': ['server_side_encryption_configuration/[0]/rule/[0]/apply_server_side_encryption_by_default/[0]/sse_algorithm']} 
+2022-03-04 11:28:23,886 [MainThread  ] [DEBUG]  Running check: S3 Bucket has an ACL defined which allows public WRITE access. on file /s3.tf
+2022-03-04 11:28:23,887 [MainThread  ] [DEBUG]  File /s3.tf, resource  "aws_s3_bucket.data" check "S3 Bucket has an ACL defined which allows public WRITE access." Result: {'result': <CheckResult.PASSED: 'PASSED'>, 'evaluated_keys': ['acl']} 
+2022-03-04 11:28:23,888 [MainThread  ] [DEBUG]  Running check: Ensure all data stored in the S3 bucket have versioning enabled on file /s3.tf
+2022-03-04 11:28:23,889 [MainThread  ] [DEBUG]  File /s3.tf, resource  "aws_s3_bucket.data" check "Ensure all data stored in the S3 bucket have versioning enabled" Result: {'result': <CheckResult.FAILED: 'FAILED'>, 'evaluated_keys': ['versioning/[0]/enabled']} 
+2022-03-04 11:28:23,889 [MainThread  ] [DEBUG]  Running check: Ensure S3 bucket policy does not lockout all but root user. (Prevent lockouts needing root account fixes) on file /s3.tf
+2022-03-04 11:28:23,890 [MainThread  ] [DEBUG]  File /s3.tf, resource  "aws_s3_bucket.data" check "Ensure S3 bucket policy does not lockout all but root user. (Prevent lockouts needing root account fixes)" Result: {'result': <CheckResult.PASSED: 'PASSED'>, 'evaluated_keys': ['policy']} 
+2022-03-04 11:28:23,895 [MainThread  ] [DEBUG]  Running check: Ensure all data stored in the S3 bucket is securely encrypted at rest on file /s3.tf
+2022-03-04 11:28:23,896 [MainThread  ] [DEBUG]  File /s3.tf, resource  "aws_s3_bucket.financials" check "Ensure all data stored in the S3 bucket is securely encrypted at rest" Result: {'result': <CheckResult.FAILED: 'FAILED'>, 'evaluated_keys': ['server_side_encryption_configuration/[0]/rule/[0]/apply_server_side_encryption_by_default/[0]/sse_algorithm']} 
+2022-03-04 11:28:23,896 [MainThread  ] [DEBUG]  Running check: Ensure that S3 bucket has lock configuration enabled by default on file /s3.tf
+2022-03-04 11:28:23,897 [MainThread  ] [DEBUG]  File /s3.tf, resource  "aws_s3_bucket.financials" check "Ensure that S3 bucket has lock configuration enabled by default" Result: {'result': <CheckResult.UNKNOWN: 'UNKNOWN'>, 'evaluated_keys': ['object_lock_configuration/[0]/object_lock_enabled']} 
+2022-03-04 11:28:23,897 [MainThread  ] [DEBUG]  Running check: S3 Bucket has an ACL defined which allows public READ access. on file /s3.tf
+2022-03-04 11:28:23,898 [MainThread  ] [DEBUG]  File /s3.tf, resource  "aws_s3_bucket.financials" check "S3 Bucket has an ACL defined which allows public READ access." Result: {'result': <CheckResult.PASSED: 'PASSED'>, 'evaluated_keys': ['acl']} 
+2022-03-04 11:28:23,899 [MainThread  ] [DEBUG]  Running check: Ensure the S3 bucket has access logging enabled on file /s3.tf
+2022-03-04 11:28:23,899 [MainThread  ] [DEBUG]  File /s3.tf, resource  "aws_s3_bucket.financials" check "Ensure the S3 bucket has access logging enabled" Result: {'result': <CheckResult.FAILED: 'FAILED'>, 'evaluated_keys': ['logging']} 
+2022-03-04 11:28:23,900 [MainThread  ] [DEBUG]  Running check: Ensure that S3 bucket has cross-region replication enabled on file /s3.tf
+2022-03-04 11:28:23,901 [MainThread  ] [DEBUG]  File /s3.tf, resource  "aws_s3_bucket.financials" check "Ensure that S3 bucket has cross-region replication enabled" Result: {'result': <CheckResult.FAILED: 'FAILED'>, 'evaluated_keys': ['replication_configuration/[0]/role']} 
+2022-03-04 11:28:23,901 [MainThread  ] [DEBUG]  Running check: Ensure S3 bucket does not allow an action with any Principal on file /s3.tf
+2022-03-04 11:28:23,902 [MainThread  ] [DEBUG]  File /s3.tf, resource  "aws_s3_bucket.financials" check "Ensure S3 bucket does not allow an action with any Principal" Result: {'result': <CheckResult.PASSED: 'PASSED'>, 'evaluated_keys': ['policy']} 
+2022-03-04 11:28:23,902 [MainThread  ] [DEBUG]  Running check: Ensure that S3 buckets are encrypted with KMS by default on file /s3.tf
+2022-03-04 11:28:23,903 [MainThread  ] [DEBUG]  File /s3.tf, resource  "aws_s3_bucket.financials" check "Ensure that S3 buckets are encrypted with KMS by default" Result: {'result': <CheckResult.FAILED: 'FAILED'>, 'evaluated_keys': ['server_side_encryption_configuration/[0]/rule/[0]/apply_server_side_encryption_by_default/[0]/sse_algorithm']} 
+2022-03-04 11:28:23,903 [MainThread  ] [DEBUG]  Running check: S3 Bucket has an ACL defined which allows public WRITE access. on file /s3.tf
+2022-03-04 11:28:23,904 [MainThread  ] [DEBUG]  File /s3.tf, resource  "aws_s3_bucket.financials" check "S3 Bucket has an ACL defined which allows public WRITE access." Result: {'result': <CheckResult.PASSED: 'PASSED'>, 'evaluated_keys': ['acl']} 
+2022-03-04 11:28:23,904 [MainThread  ] [DEBUG]  Running check: Ensure all data stored in the S3 bucket have versioning enabled on file /s3.tf
+2022-03-04 11:28:23,905 [MainThread  ] [DEBUG]  File /s3.tf, resource  "aws_s3_bucket.financials" check "Ensure all data stored in the S3 bucket have versioning enabled" Result: {'result': <CheckResult.FAILED: 'FAILED'>, 'evaluated_keys': ['versioning/[0]/enabled']} 
+2022-03-04 11:28:23,905 [MainThread  ] [DEBUG]  Running check: Ensure S3 bucket policy does not lockout all but root user. (Prevent lockouts needing root account fixes) on file /s3.tf
+2022-03-04 11:28:23,906 [MainThread  ] [DEBUG]  File /s3.tf, resource  "aws_s3_bucket.financials" check "Ensure S3 bucket policy does not lockout all but root user. (Prevent lockouts needing root account fixes)" Result: {'result': <CheckResult.PASSED: 'PASSED'>, 'evaluated_keys': ['policy']} 
+2022-03-04 11:28:23,909 [MainThread  ] [DEBUG]  Running check: Ensure all data stored in the S3 bucket is securely encrypted at rest on file /s3.tf
+2022-03-04 11:28:23,910 [MainThread  ] [DEBUG]  File /s3.tf, resource  "aws_s3_bucket.operations" check "Ensure all data stored in the S3 bucket is securely encrypted at rest" Result: {'result': <CheckResult.FAILED: 'FAILED'>, 'evaluated_keys': ['server_side_encryption_configuration/[0]/rule/[0]/apply_server_side_encryption_by_default/[0]/sse_algorithm']} 
+2022-03-04 11:28:23,911 [MainThread  ] [DEBUG]  Running check: Ensure that S3 bucket has lock configuration enabled by default on file /s3.tf
+2022-03-04 11:28:23,911 [MainThread  ] [DEBUG]  File /s3.tf, resource  "aws_s3_bucket.operations" check "Ensure that S3 bucket has lock configuration enabled by default" Result: {'result': <CheckResult.UNKNOWN: 'UNKNOWN'>, 'evaluated_keys': ['object_lock_configuration/[0]/object_lock_enabled']} 
+2022-03-04 11:28:23,912 [MainThread  ] [DEBUG]  Running check: S3 Bucket has an ACL defined which allows public READ access. on file /s3.tf
+2022-03-04 11:28:23,912 [MainThread  ] [DEBUG]  File /s3.tf, resource  "aws_s3_bucket.operations" check "S3 Bucket has an ACL defined which allows public READ access." Result: {'result': <CheckResult.PASSED: 'PASSED'>, 'evaluated_keys': ['acl']} 
+2022-03-04 11:28:23,913 [MainThread  ] [DEBUG]  Running check: Ensure the S3 bucket has access logging enabled on file /s3.tf
+2022-03-04 11:28:23,913 [MainThread  ] [DEBUG]  File /s3.tf, resource  "aws_s3_bucket.operations" check "Ensure the S3 bucket has access logging enabled" Result: {'result': <CheckResult.FAILED: 'FAILED'>, 'evaluated_keys': ['logging']} 
+2022-03-04 11:28:23,914 [MainThread  ] [DEBUG]  Running check: Ensure that S3 bucket has cross-region replication enabled on file /s3.tf
+2022-03-04 11:28:23,914 [MainThread  ] [DEBUG]  File /s3.tf, resource  "aws_s3_bucket.operations" check "Ensure that S3 bucket has cross-region replication enabled" Result: {'result': <CheckResult.FAILED: 'FAILED'>, 'evaluated_keys': ['replication_configuration/[0]/role']} 
+2022-03-04 11:28:23,915 [MainThread  ] [DEBUG]  Running check: Ensure S3 bucket does not allow an action with any Principal on file /s3.tf
+2022-03-04 11:28:23,915 [MainThread  ] [DEBUG]  File /s3.tf, resource  "aws_s3_bucket.operations" check "Ensure S3 bucket does not allow an action with any Principal" Result: {'result': <CheckResult.PASSED: 'PASSED'>, 'evaluated_keys': ['policy']} 
+2022-03-04 11:28:23,916 [MainThread  ] [DEBUG]  Running check: Ensure that S3 buckets are encrypted with KMS by default on file /s3.tf
+2022-03-04 11:28:23,916 [MainThread  ] [DEBUG]  File /s3.tf, resource  "aws_s3_bucket.operations" check "Ensure that S3 buckets are encrypted with KMS by default" Result: {'result': <CheckResult.FAILED: 'FAILED'>, 'evaluated_keys': ['server_side_encryption_configuration/[0]/rule/[0]/apply_server_side_encryption_by_default/[0]/sse_algorithm']} 
+2022-03-04 11:28:23,917 [MainThread  ] [DEBUG]  Running check: S3 Bucket has an ACL defined which allows public WRITE access. on file /s3.tf
+2022-03-04 11:28:23,917 [MainThread  ] [DEBUG]  File /s3.tf, resource  "aws_s3_bucket.operations" check "S3 Bucket has an ACL defined which allows public WRITE access." Result: {'result': <CheckResult.PASSED: 'PASSED'>, 'evaluated_keys': ['acl']} 
+2022-03-04 11:28:23,918 [MainThread  ] [DEBUG]  Running check: Ensure all data stored in the S3 bucket have versioning enabled on file /s3.tf
+2022-03-04 11:28:23,919 [MainThread  ] [DEBUG]  File /s3.tf, resource  "aws_s3_bucket.operations" check "Ensure all data stored in the S3 bucket have versioning enabled" Result: {'result': <CheckResult.PASSED: 'PASSED'>, 'evaluated_keys': ['versioning/[0]/enabled']} 
+2022-03-04 11:28:23,919 [MainThread  ] [DEBUG]  Running check: Ensure S3 bucket policy does not lockout all but root user. (Prevent lockouts needing root account fixes) on file /s3.tf
+2022-03-04 11:28:23,920 [MainThread  ] [DEBUG]  File /s3.tf, resource  "aws_s3_bucket.operations" check "Ensure S3 bucket policy does not lockout all but root user. (Prevent lockouts needing root account fixes)" Result: {'result': <CheckResult.PASSED: 'PASSED'>, 'evaluated_keys': ['policy']} 
+2022-03-04 11:28:23,923 [MainThread  ] [DEBUG]  Running check: Ensure all data stored in the S3 bucket is securely encrypted at rest on file /s3.tf
+2022-03-04 11:28:23,924 [MainThread  ] [DEBUG]  File /s3.tf, resource  "aws_s3_bucket.data_science" check "Ensure all data stored in the S3 bucket is securely encrypted at rest" Result: {'result': <CheckResult.FAILED: 'FAILED'>, 'evaluated_keys': ['server_side_encryption_configuration/[0]/rule/[0]/apply_server_side_encryption_by_default/[0]/sse_algorithm']} 
+2022-03-04 11:28:23,925 [MainThread  ] [DEBUG]  Running check: Ensure that S3 bucket has lock configuration enabled by default on file /s3.tf
+2022-03-04 11:28:23,925 [MainThread  ] [DEBUG]  File /s3.tf, resource  "aws_s3_bucket.data_science" check "Ensure that S3 bucket has lock configuration enabled by default" Result: {'result': <CheckResult.UNKNOWN: 'UNKNOWN'>, 'evaluated_keys': ['object_lock_configuration/[0]/object_lock_enabled']} 
+2022-03-04 11:28:23,926 [MainThread  ] [DEBUG]  Running check: S3 Bucket has an ACL defined which allows public READ access. on file /s3.tf
+2022-03-04 11:28:23,926 [MainThread  ] [DEBUG]  File /s3.tf, resource  "aws_s3_bucket.data_science" check "S3 Bucket has an ACL defined which allows public READ access." Result: {'result': <CheckResult.PASSED: 'PASSED'>, 'evaluated_keys': ['acl']} 
+2022-03-04 11:28:23,927 [MainThread  ] [DEBUG]  Running check: Ensure the S3 bucket has access logging enabled on file /s3.tf
+2022-03-04 11:28:23,927 [MainThread  ] [DEBUG]  File /s3.tf, resource  "aws_s3_bucket.data_science" check "Ensure the S3 bucket has access logging enabled" Result: {'result': <CheckResult.PASSED: 'PASSED'>, 'evaluated_keys': ['logging']} 
+2022-03-04 11:28:23,928 [MainThread  ] [DEBUG]  Running check: Ensure that S3 bucket has cross-region replication enabled on file /s3.tf
+2022-03-04 11:28:23,928 [MainThread  ] [DEBUG]  File /s3.tf, resource  "aws_s3_bucket.data_science" check "Ensure that S3 bucket has cross-region replication enabled" Result: {'result': <CheckResult.FAILED: 'FAILED'>, 'evaluated_keys': ['replication_configuration/[0]/role']} 
+2022-03-04 11:28:23,929 [MainThread  ] [DEBUG]  Running check: Ensure S3 bucket does not allow an action with any Principal on file /s3.tf
+2022-03-04 11:28:23,929 [MainThread  ] [DEBUG]  File /s3.tf, resource  "aws_s3_bucket.data_science" check "Ensure S3 bucket does not allow an action with any Principal" Result: {'result': <CheckResult.PASSED: 'PASSED'>, 'evaluated_keys': ['policy']} 
+2022-03-04 11:28:23,930 [MainThread  ] [DEBUG]  Running check: Ensure that S3 buckets are encrypted with KMS by default on file /s3.tf
+2022-03-04 11:28:23,931 [MainThread  ] [DEBUG]  File /s3.tf, resource  "aws_s3_bucket.data_science" check "Ensure that S3 buckets are encrypted with KMS by default" Result: {'result': <CheckResult.FAILED: 'FAILED'>, 'evaluated_keys': ['server_side_encryption_configuration/[0]/rule/[0]/apply_server_side_encryption_by_default/[0]/sse_algorithm']} 
+2022-03-04 11:28:23,931 [MainThread  ] [DEBUG]  Running check: S3 Bucket has an ACL defined which allows public WRITE access. on file /s3.tf
+2022-03-04 11:28:23,932 [MainThread  ] [DEBUG]  File /s3.tf, resource  "aws_s3_bucket.data_science" check "S3 Bucket has an ACL defined which allows public WRITE access." Result: {'result': <CheckResult.PASSED: 'PASSED'>, 'evaluated_keys': ['acl']} 
+2022-03-04 11:28:23,932 [MainThread  ] [DEBUG]  Running check: Ensure all data stored in the S3 bucket have versioning enabled on file /s3.tf
+2022-03-04 11:28:23,933 [MainThread  ] [DEBUG]  File /s3.tf, resource  "aws_s3_bucket.data_science" check "Ensure all data stored in the S3 bucket have versioning enabled" Result: {'result': <CheckResult.PASSED: 'PASSED'>, 'evaluated_keys': ['versioning/[0]/enabled']} 
+2022-03-04 11:28:23,933 [MainThread  ] [DEBUG]  Running check: Ensure S3 bucket policy does not lockout all but root user. (Prevent lockouts needing root account fixes) on file /s3.tf
+2022-03-04 11:28:23,934 [MainThread  ] [DEBUG]  File /s3.tf, resource  "aws_s3_bucket.data_science" check "Ensure S3 bucket policy does not lockout all but root user. (Prevent lockouts needing root account fixes)" Result: {'result': <CheckResult.PASSED: 'PASSED'>, 'evaluated_keys': ['policy']} 
+2022-03-04 11:28:23,937 [MainThread  ] [DEBUG]  Running check: Ensure all data stored in the S3 bucket is securely encrypted at rest on file /s3.tf
+2022-03-04 11:28:23,938 [MainThread  ] [DEBUG]  File /s3.tf, resource  "aws_s3_bucket.logs" check "Ensure all data stored in the S3 bucket is securely encrypted at rest" Result: {'result': <CheckResult.FAILED: 'FAILED'>, 'evaluated_keys': ['server_side_encryption_configuration/[0]/rule/[0]/apply_server_side_encryption_by_default/[0]/sse_algorithm']} 
+2022-03-04 11:28:23,938 [MainThread  ] [DEBUG]  Running check: Ensure that S3 bucket has lock configuration enabled by default on file /s3.tf
+2022-03-04 11:28:23,939 [MainThread  ] [DEBUG]  File /s3.tf, resource  "aws_s3_bucket.logs" check "Ensure that S3 bucket has lock configuration enabled by default" Result: {'result': <CheckResult.UNKNOWN: 'UNKNOWN'>, 'evaluated_keys': ['object_lock_configuration/[0]/object_lock_enabled']} 
+2022-03-04 11:28:23,939 [MainThread  ] [DEBUG]  Running check: S3 Bucket has an ACL defined which allows public READ access. on file /s3.tf
+2022-03-04 11:28:23,940 [MainThread  ] [DEBUG]  File /s3.tf, resource  "aws_s3_bucket.logs" check "S3 Bucket has an ACL defined which allows public READ access." Result: {'result': <CheckResult.PASSED: 'PASSED'>, 'evaluated_keys': ['acl']} 
+2022-03-04 11:28:23,940 [MainThread  ] [DEBUG]  Running check: Ensure the S3 bucket has access logging enabled on file /s3.tf
+2022-03-04 11:28:23,941 [MainThread  ] [DEBUG]  File /s3.tf, resource  "aws_s3_bucket.logs" check "Ensure the S3 bucket has access logging enabled" Result: {'result': <CheckResult.FAILED: 'FAILED'>, 'evaluated_keys': ['logging']} 
+2022-03-04 11:28:23,941 [MainThread  ] [DEBUG]  Running check: Ensure that S3 bucket has cross-region replication enabled on file /s3.tf
+2022-03-04 11:28:23,942 [MainThread  ] [DEBUG]  File /s3.tf, resource  "aws_s3_bucket.logs" check "Ensure that S3 bucket has cross-region replication enabled" Result: {'result': <CheckResult.FAILED: 'FAILED'>, 'evaluated_keys': ['replication_configuration/[0]/role']} 
+2022-03-04 11:28:23,942 [MainThread  ] [DEBUG]  Running check: Ensure S3 bucket does not allow an action with any Principal on file /s3.tf
+2022-03-04 11:28:23,943 [MainThread  ] [DEBUG]  File /s3.tf, resource  "aws_s3_bucket.logs" check "Ensure S3 bucket does not allow an action with any Principal" Result: {'result': <CheckResult.PASSED: 'PASSED'>, 'evaluated_keys': ['policy']} 
+2022-03-04 11:28:23,943 [MainThread  ] [DEBUG]  Running check: Ensure that S3 buckets are encrypted with KMS by default on file /s3.tf
+2022-03-04 11:28:23,944 [MainThread  ] [DEBUG]  File /s3.tf, resource  "aws_s3_bucket.logs" check "Ensure that S3 buckets are encrypted with KMS by default" Result: {'result': <CheckResult.FAILED: 'FAILED'>, 'evaluated_keys': ['server_side_encryption_configuration/[0]/rule/[0]/apply_server_side_encryption_by_default/[0]/sse_algorithm']} 
+2022-03-04 11:28:23,944 [MainThread  ] [DEBUG]  Running check: S3 Bucket has an ACL defined which allows public WRITE access. on file /s3.tf
+2022-03-04 11:28:23,945 [MainThread  ] [DEBUG]  File /s3.tf, resource  "aws_s3_bucket.logs" check "S3 Bucket has an ACL defined which allows public WRITE access." Result: {'result': <CheckResult.PASSED: 'PASSED'>, 'evaluated_keys': ['acl']} 
+2022-03-04 11:28:23,945 [MainThread  ] [DEBUG]  Running check: Ensure all data stored in the S3 bucket have versioning enabled on file /s3.tf
+2022-03-04 11:28:23,946 [MainThread  ] [DEBUG]  File /s3.tf, resource  "aws_s3_bucket.logs" check "Ensure all data stored in the S3 bucket have versioning enabled" Result: {'result': <CheckResult.FAILED: 'FAILED'>, 'evaluated_keys': ['versioning/[0]/enabled']} 
+2022-03-04 11:28:23,946 [MainThread  ] [DEBUG]  Running check: Ensure S3 bucket policy does not lockout all but root user. (Prevent lockouts needing root account fixes) on file /s3.tf
+2022-03-04 11:28:23,947 [MainThread  ] [DEBUG]  File /s3.tf, resource  "aws_s3_bucket.logs" check "Ensure S3 bucket policy does not lockout all but root user. (Prevent lockouts needing root account fixes)" Result: {'result': <CheckResult.PASSED: 'PASSED'>, 'evaluated_keys': ['policy']} 
+2022-03-04 11:28:23,951 [MainThread  ] [INFO ]  Loading external checks from /Users/kpande/.local/lib/python3.7/site-packages/checkov/terraform/checks/graph_checks
+2022-03-04 11:28:23,951 [MainThread  ] [INFO ]  Searching through ['azure', '__pycache__', 'gcp', 'aws'] and ['__init__.py']
+2022-03-04 11:28:23,952 [MainThread  ] [INFO ]  Searching through [] and ['AzureActiveDirectoryAdminIsConfigured.yaml', 'AzureAntimalwareIsConfiguredWithAutoUpdatesForVMs.yaml', 'MSQLenablesCustomerManagedKey.yaml', 'AzureSynapseWorkspacesHaveNoIPFirewallRulesAttached.yaml', 'StorageCriticalDataEncryptedCMK.yaml', 'AzureStorageAccountsUseCustomerManagedKeyForEncryption.yaml', 'VMHasBackUpMachine.yaml', 'VirtualMachinesUtilizingManagedDisks.yaml', 'DataExplorerEncryptionUsesCustomKey.yaml', 'SQLServerAuditingEnabled.yaml', 'SQLServerAuditingRetention90Days.yaml', 'StorageContainerActivityLogsNotPublic.yaml', 'AzureUnattachedDisksAreEncrypted.yaml', 'AzureDataFactoriesEncryptedWithCustomerManagedKey.yaml', 'VAsetPeriodicScansOnSQL.yaml', 'VAconfiguredToSendReports.yaml', 'StorageLoggingIsEnabledForTableService.yaml', 'PGSQLenablesCustomerManagedKey.yaml', 'AzureMSSQLServerHasSecurityAlertPolicy.yaml', 'StorageLoggingIsEnabledForBlobService.yaml', 'AzureNetworkInterfacePublicIPAddressId.yaml', 'AccessToPostgreSQLFromAzureServicesIsDisabled.yaml', 'CognitiveServicesCustomerManagedKey.yaml', 'VAconfiguredToSendReportsToAdmins.yaml', 'VAisEnabledInStorageAccount.yaml']
+2022-03-04 11:28:24,038 [MainThread  ] [INFO ]  Searching through [] and ['__init__.cpython-37.pyc']
+2022-03-04 11:28:24,039 [MainThread  ] [INFO ]  Searching through [] and ['GCPKMSCryptoKeysAreNotPubliclyAccessible.yaml', 'GCPLogBucketsConfiguredUsingLock.yaml', 'GCPAuditLogsConfiguredForAllServicesAndUsers.yaml', 'GCPKMSKeyRingsAreNotPubliclyAccessible.yaml', 'GCPProjectHasNoLegacyNetworks.yaml', 'ServiceAccountHasGCPmanagedKey.yaml', 'DisableAccessToSqlDBInstanceForRootUsersWithoutPassword.yaml', 'GCPContainerRegistryReposAreNotPubliclyAccessible.yaml', 'GKEClustersAreNotUsingDefaultServiceAccount.yaml']
+2022-03-04 11:28:24,083 [MainThread  ] [INFO ]  Searching through [] and ['GuardDutyIsEnabled.yaml', 'AppSyncProtectedByWAF.yaml', 'SGAttachedToResource.yaml', 'WAF2HasLogs.yaml', 'SubnetHasACL.yaml', 'EIPAllocatedToVPCAttachedEC2.yaml', 'EncryptedEBSVolumeOnlyConnectedToEC2s.yaml', 'CloudtrailHasCloudwatch.yaml', 'AWSNATGatewaysshouldbeutilized.yaml', 'APIGWLoggingLevelsDefinedProperly.yaml', 'AutoScalingEnableOnDynamoDBTables.yaml', 'CloudFrontHasSecurityHeadersPolicy.yaml', 'VPCHasRestrictedSG.yaml', 'AutoScallingEnabledELB.yaml', 'ALBRedirectsHTTPToHTTPS.yaml', 'VPCHasFlowLog.yaml', 'AMRClustersNotOpenToInternet.yaml', 'AWSSSMParameterShouldBeEncrypted.yaml', 'PostgresDBHasQueryLoggingEnabled.yaml', 'PostgresRDSHasQueryLoggingEnabled.yaml', 'Route53ARecordAttachedResource.yaml', 'APIProtectedByWAF.yaml', 'IAMUserHasNoConsoleAccess.yaml', 'IAMUsersAreMembersAtLeastOneGroup.yaml', 'ALBProtectedByWAF.yaml', 'HTTPNotSendingPasswords.yaml', 'S3BucketHasPublicAccessBlock.yaml', 'IAMGroupHasAtLeastOneUser.yaml', 'RDSClusterHasBackupPlan.yaml', 'EFSAddedBackup.yaml', 'EBSAddedBackup.yaml']
+2022-03-04 11:28:24,217 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_AZURE_7
+2022-03-04 11:28:24,218 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_AZURE_10
+2022-03-04 11:28:24,219 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_AZURE_16
+2022-03-04 11:28:24,219 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_AZURE_19
+2022-03-04 11:28:24,220 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_AZURE_1
+2022-03-04 11:28:24,221 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_AZURE_18
+2022-03-04 11:28:24,221 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_AZURE_12
+2022-03-04 11:28:24,221 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_AZURE_9
+2022-03-04 11:28:24,221 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_AZURE_11
+2022-03-04 11:28:24,222 [ThreadPoolEx] [DEBUG]  Running graph check: CKV_AZURE_23
+2022-03-04 11:28:24,222 [ThreadPoolEx] [DEBUG]  Running graph check: CKV_AZURE_24
+2022-03-04 11:28:24,223 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_AZURE_8
+2022-03-04 11:28:24,223 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_AZURE_14
+2022-03-04 11:28:24,223 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_AZURE_15
+2022-03-04 11:28:24,224 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_AZURE_3
+2022-03-04 11:28:24,224 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_AZURE_4
+2022-03-04 11:28:24,224 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_AZURE_20
+2022-03-04 11:28:24,225 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_AZURE_17
+2022-03-04 11:28:24,225 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_AZURE_13
+2022-03-04 11:28:24,225 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_AZURE_21
+2022-03-04 11:28:24,226 [ThreadPoolEx] [DEBUG]  Running graph check: CKV_AZURE_119
+2022-03-04 11:28:24,226 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_AZURE_6
+2022-03-04 11:28:24,226 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_AZURE_22
+2022-03-04 11:28:24,227 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_AZURE_5
+2022-03-04 11:28:24,227 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_AZURE_2
+2022-03-04 11:28:24,228 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_GCP_6
+2022-03-04 11:28:24,228 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_GCP_4
+2022-03-04 11:28:24,228 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_GCP_5
+2022-03-04 11:28:24,229 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_GCP_8
+2022-03-04 11:28:24,229 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_GCP_2
+2022-03-04 11:28:24,229 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_GCP_3
+2022-03-04 11:28:24,230 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_GCP_7
+2022-03-04 11:28:24,230 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_GCP_9
+2022-03-04 11:28:24,231 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_GCP_1
+2022-03-04 11:28:24,232 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_AWS_3
+2022-03-04 11:28:24,232 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_AWS_33
+2022-03-04 11:28:24,233 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_AWS_5
+2022-03-04 11:28:24,234 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_AWS_31
+2022-03-04 11:28:24,234 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_AWS_1
+2022-03-04 11:28:24,235 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_AWS_19
+2022-03-04 11:28:24,235 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_AWS_2
+2022-03-04 11:28:24,236 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_AWS_10
+2022-03-04 11:28:24,237 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_AWS_35
+2022-03-04 11:28:24,237 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_AWS_4
+2022-03-04 11:28:24,238 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_AWS_16
+2022-03-04 11:28:24,238 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_AWS_32
+2022-03-04 11:28:24,239 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_AWS_12
+2022-03-04 11:28:24,239 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_AWS_15
+2022-03-04 11:28:24,240 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_AWS_20
+2022-03-04 11:28:24,240 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_AWS_11
+2022-03-04 11:28:24,241 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_AWS_7
+2022-03-04 11:28:24,242 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_AWS_34
+2022-03-04 11:28:24,242 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_AWS_30
+2022-03-04 11:28:24,243 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_AWS_27
+2022-03-04 11:28:24,244 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_AWS_23
+2022-03-04 11:28:24,245 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_AWS_29
+2022-03-04 11:28:24,245 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_AWS_22
+2022-03-04 11:28:24,246 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_AWS_21
+2022-03-04 11:28:24,247 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_AWS_28
+2022-03-04 11:28:24,247 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_AWS_36
+2022-03-04 11:28:24,248 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_AWS_6
+2022-03-04 11:28:24,248 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_AWS_14
+2022-03-04 11:28:24,248 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_AWS_8
+2022-03-04 11:28:24,248 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_AWS_18
+2022-03-04 11:28:24,249 [ThreadPoolEx] [DEBUG]  Running graph check: CKV2_AWS_9
+
+       _               _              
+   ___| |__   ___  ___| | _______   __
+  / __| '_ \ / _ \/ __| |/ / _ \ \ / /
+ | (__| | | |  __/ (__|   < (_) \ V / 
+  \___|_| |_|\___|\___|_|\_\___/ \_/  
+                                      
+By bridgecrew.io | version: 2.0.917 
+
+terraform scan results:
+
+Passed checks: 23, Failed checks: 28, Skipped checks: 0
+
+Check: CKV_AWS_41: "Ensure no hard coded AWS access key and secret key exists in provider"
+	PASSED for resource: aws.default
+	File: /providers.tf:1-3
+	Guide: https://docs.bridgecrew.io/docs/bc_aws_secrets_5
+Check: CKV_AWS_70: "Ensure S3 bucket does not allow an action with any Principal"
+	PASSED for resource: aws_s3_bucket.data
+	File: /s3.tf:1-9
+	Guide: https://docs.bridgecrew.io/docs/bc_aws_s3_23
+Check: CKV_AWS_57: "S3 Bucket has an ACL defined which allows public WRITE access."
+	PASSED for resource: aws_s3_bucket.data
+	File: /s3.tf:1-9
+	Guide: https://docs.bridgecrew.io/docs/s3_2-acl-write-permissions-everyone
+Check: CKV_AWS_93: "Ensure S3 bucket policy does not lockout all but root user. (Prevent lockouts needing root account fixes)"
+	PASSED for resource: aws_s3_bucket.data
+	File: /s3.tf:1-9
+	Guide: https://docs.bridgecrew.io/docs/bc_aws_iam_53
+Check: CKV_AWS_20: "S3 Bucket has an ACL defined which allows public READ access."
+	PASSED for resource: aws_s3_bucket.financials
+	File: /s3.tf:11-18
+	Guide: https://docs.bridgecrew.io/docs/s3_1-acl-read-permissions-everyone
+Check: CKV_AWS_70: "Ensure S3 bucket does not allow an action with any Principal"
+	PASSED for resource: aws_s3_bucket.financials
+	File: /s3.tf:11-18
+	Guide: https://docs.bridgecrew.io/docs/bc_aws_s3_23
+Check: CKV_AWS_57: "S3 Bucket has an ACL defined which allows public WRITE access."
+	PASSED for resource: aws_s3_bucket.financials
+	File: /s3.tf:11-18
+	Guide: https://docs.bridgecrew.io/docs/s3_2-acl-write-permissions-everyone
+Check: CKV_AWS_93: "Ensure S3 bucket policy does not lockout all but root user. (Prevent lockouts needing root account fixes)"
+	PASSED for resource: aws_s3_bucket.financials
+	File: /s3.tf:11-18
+	Guide: https://docs.bridgecrew.io/docs/bc_aws_iam_53
+Check: CKV_AWS_20: "S3 Bucket has an ACL defined which allows public READ access."
+	PASSED for resource: aws_s3_bucket.operations
+	File: /s3.tf:20-29
+	Guide: https://docs.bridgecrew.io/docs/s3_1-acl-read-permissions-everyone
+Check: CKV_AWS_70: "Ensure S3 bucket does not allow an action with any Principal"
+	PASSED for resource: aws_s3_bucket.operations
+	File: /s3.tf:20-29
+	Guide: https://docs.bridgecrew.io/docs/bc_aws_s3_23
+Check: CKV_AWS_57: "S3 Bucket has an ACL defined which allows public WRITE access."
+	PASSED for resource: aws_s3_bucket.operations
+	File: /s3.tf:20-29
+	Guide: https://docs.bridgecrew.io/docs/s3_2-acl-write-permissions-everyone
+Check: CKV_AWS_21: "Ensure all data stored in the S3 bucket have versioning enabled"
+	PASSED for resource: aws_s3_bucket.operations
+	File: /s3.tf:20-29
+	Guide: https://docs.bridgecrew.io/docs/s3_16-enable-versioning
+Check: CKV_AWS_93: "Ensure S3 bucket policy does not lockout all but root user. (Prevent lockouts needing root account fixes)"
+	PASSED for resource: aws_s3_bucket.operations
+	File: /s3.tf:20-29
+	Guide: https://docs.bridgecrew.io/docs/bc_aws_iam_53
+Check: CKV_AWS_20: "S3 Bucket has an ACL defined which allows public READ access."
+	PASSED for resource: aws_s3_bucket.data_science
+	File: /s3.tf:31-42
+	Guide: https://docs.bridgecrew.io/docs/s3_1-acl-read-permissions-everyone
+Check: CKV_AWS_18: "Ensure the S3 bucket has access logging enabled"
+	PASSED for resource: aws_s3_bucket.data_science
+	File: /s3.tf:31-42
+	Guide: https://docs.bridgecrew.io/docs/s3_13-enable-logging
+Check: CKV_AWS_70: "Ensure S3 bucket does not allow an action with any Principal"
+	PASSED for resource: aws_s3_bucket.data_science
+	File: /s3.tf:31-42
+	Guide: https://docs.bridgecrew.io/docs/bc_aws_s3_23
+Check: CKV_AWS_57: "S3 Bucket has an ACL defined which allows public WRITE access."
+	PASSED for resource: aws_s3_bucket.data_science
+	File: /s3.tf:31-42
+	Guide: https://docs.bridgecrew.io/docs/s3_2-acl-write-permissions-everyone
+Check: CKV_AWS_21: "Ensure all data stored in the S3 bucket have versioning enabled"
+	PASSED for resource: aws_s3_bucket.data_science
+	File: /s3.tf:31-42
+	Guide: https://docs.bridgecrew.io/docs/s3_16-enable-versioning
+Check: CKV_AWS_93: "Ensure S3 bucket policy does not lockout all but root user. (Prevent lockouts needing root account fixes)"
+	PASSED for resource: aws_s3_bucket.data_science
+	File: /s3.tf:31-42
+	Guide: https://docs.bridgecrew.io/docs/bc_aws_iam_53
+Check: CKV_AWS_20: "S3 Bucket has an ACL defined which allows public READ access."
+	PASSED for resource: aws_s3_bucket.logs
+	File: /s3.tf:44-48
+	Guide: https://docs.bridgecrew.io/docs/s3_1-acl-read-permissions-everyone
+Check: CKV_AWS_70: "Ensure S3 bucket does not allow an action with any Principal"
+	PASSED for resource: aws_s3_bucket.logs
+	File: /s3.tf:44-48
+	Guide: https://docs.bridgecrew.io/docs/bc_aws_s3_23
+Check: CKV_AWS_57: "S3 Bucket has an ACL defined which allows public WRITE access."
+	PASSED for resource: aws_s3_bucket.logs
+	File: /s3.tf:44-48
+	Guide: https://docs.bridgecrew.io/docs/s3_2-acl-write-permissions-everyone
+Check: CKV_AWS_93: "Ensure S3 bucket policy does not lockout all but root user. (Prevent lockouts needing root account fixes)"
+	PASSED for resource: aws_s3_bucket.logs
+	File: /s3.tf:44-48
+	Guide: https://docs.bridgecrew.io/docs/bc_aws_iam_53
+Check: CKV_AWS_19: "Ensure all data stored in the S3 bucket is securely encrypted at rest"
+	FAILED for resource: aws_s3_bucket.data
+	File: /s3.tf:1-9
+	Guide: https://docs.bridgecrew.io/docs/s3_14-data-encrypted-at-rest
+
+		1 | resource "aws_s3_bucket" "data" {
+		2 |   # bucket is public
+		3 |   # bucket is not encrypted
+		4 |   # bucket does not have access logs
+		5 |   # bucket does not have versioning
+		6 |   bucket        = "${local.resource_prefix.value}-data"
+		7 |   acl           = "public-read"
+		8 |   force_destroy = true
+		9 | }
+
+Check: CKV_AWS_20: "S3 Bucket has an ACL defined which allows public READ access."
+	FAILED for resource: aws_s3_bucket.data
+	File: /s3.tf:1-9
+	Guide: https://docs.bridgecrew.io/docs/s3_1-acl-read-permissions-everyone
+
+		1 | resource "aws_s3_bucket" "data" {
+		2 |   # bucket is public
+		3 |   # bucket is not encrypted
+		4 |   # bucket does not have access logs
+		5 |   # bucket does not have versioning
+		6 |   bucket        = "${local.resource_prefix.value}-data"
+		7 |   acl           = "public-read"
+		8 |   force_destroy = true
+		9 | }
+
+Check: CKV_AWS_18: "Ensure the S3 bucket has access logging enabled"
+	FAILED for resource: aws_s3_bucket.data
+	File: /s3.tf:1-9
+	Guide: https://docs.bridgecrew.io/docs/s3_13-enable-logging
+
+		1 | resource "aws_s3_bucket" "data" {
+		2 |   # bucket is public
+		3 |   # bucket is not encrypted
+		4 |   # bucket does not have access logs
+		5 |   # bucket does not have versioning
+		6 |   bucket        = "${local.resource_prefix.value}-data"
+		7 |   acl           = "public-read"
+		8 |   force_destroy = true
+		9 | }
+
+Check: CKV_AWS_144: "Ensure that S3 bucket has cross-region replication enabled"
+	FAILED for resource: aws_s3_bucket.data
+	File: /s3.tf:1-9
+	Guide: https://docs.bridgecrew.io/docs/ensure-that-s3-bucket-has-cross-region-replication-enabled
+
+		1 | resource "aws_s3_bucket" "data" {
+		2 |   # bucket is public
+		3 |   # bucket is not encrypted
+		4 |   # bucket does not have access logs
+		5 |   # bucket does not have versioning
+		6 |   bucket        = "${local.resource_prefix.value}-data"
+		7 |   acl           = "public-read"
+		8 |   force_destroy = true
+		9 | }
+
+Check: CKV_AWS_145: "Ensure that S3 buckets are encrypted with KMS by default"
+	FAILED for resource: aws_s3_bucket.data
+	File: /s3.tf:1-9
+	Guide: https://docs.bridgecrew.io/docs/ensure-that-s3-buckets-are-encrypted-with-kms-by-default
+
+		1 | resource "aws_s3_bucket" "data" {
+		2 |   # bucket is public
+		3 |   # bucket is not encrypted
+		4 |   # bucket does not have access logs
+		5 |   # bucket does not have versioning
+		6 |   bucket        = "${local.resource_prefix.value}-data"
+		7 |   acl           = "public-read"
+		8 |   force_destroy = true
+		9 | }
+
+Check: CKV_AWS_21: "Ensure all data stored in the S3 bucket have versioning enabled"
+	FAILED for resource: aws_s3_bucket.data
+	File: /s3.tf:1-9
+	Guide: https://docs.bridgecrew.io/docs/s3_16-enable-versioning
+
+		1 | resource "aws_s3_bucket" "data" {
+		2 |   # bucket is public
+		3 |   # bucket is not encrypted
+		4 |   # bucket does not have access logs
+		5 |   # bucket does not have versioning
+		6 |   bucket        = "${local.resource_prefix.value}-data"
+		7 |   acl           = "public-read"
+		8 |   force_destroy = true
+		9 | }
+
+Check: CKV_AWS_19: "Ensure all data stored in the S3 bucket is securely encrypted at rest"
+	FAILED for resource: aws_s3_bucket.financials
+	File: /s3.tf:11-18
+	Guide: https://docs.bridgecrew.io/docs/s3_14-data-encrypted-at-rest
+
+		11 | resource "aws_s3_bucket" "financials" {
+		12 |   # bucket is not encrypted
+		13 |   # bucket does not have access logs
+		14 |   # bucket does not have versioning
+		15 |   bucket        = "${local.resource_prefix.value}-financials"
+		16 |   acl           = "private"
+		17 |   force_destroy = true
+		18 | }
+
+Check: CKV_AWS_18: "Ensure the S3 bucket has access logging enabled"
+	FAILED for resource: aws_s3_bucket.financials
+	File: /s3.tf:11-18
+	Guide: https://docs.bridgecrew.io/docs/s3_13-enable-logging
+
+		11 | resource "aws_s3_bucket" "financials" {
+		12 |   # bucket is not encrypted
+		13 |   # bucket does not have access logs
+		14 |   # bucket does not have versioning
+		15 |   bucket        = "${local.resource_prefix.value}-financials"
+		16 |   acl           = "private"
+		17 |   force_destroy = true
+		18 | }
+
+Check: CKV_AWS_144: "Ensure that S3 bucket has cross-region replication enabled"
+	FAILED for resource: aws_s3_bucket.financials
+	File: /s3.tf:11-18
+	Guide: https://docs.bridgecrew.io/docs/ensure-that-s3-bucket-has-cross-region-replication-enabled
+
+		11 | resource "aws_s3_bucket" "financials" {
+		12 |   # bucket is not encrypted
+		13 |   # bucket does not have access logs
+		14 |   # bucket does not have versioning
+		15 |   bucket        = "${local.resource_prefix.value}-financials"
+		16 |   acl           = "private"
+		17 |   force_destroy = true
+		18 | }
+
+Check: CKV_AWS_145: "Ensure that S3 buckets are encrypted with KMS by default"
+	FAILED for resource: aws_s3_bucket.financials
+	File: /s3.tf:11-18
+	Guide: https://docs.bridgecrew.io/docs/ensure-that-s3-buckets-are-encrypted-with-kms-by-default
+
+		11 | resource "aws_s3_bucket" "financials" {
+		12 |   # bucket is not encrypted
+		13 |   # bucket does not have access logs
+		14 |   # bucket does not have versioning
+		15 |   bucket        = "${local.resource_prefix.value}-financials"
+		16 |   acl           = "private"
+		17 |   force_destroy = true
+		18 | }
+
+Check: CKV_AWS_21: "Ensure all data stored in the S3 bucket have versioning enabled"
+	FAILED for resource: aws_s3_bucket.financials
+	File: /s3.tf:11-18
+	Guide: https://docs.bridgecrew.io/docs/s3_16-enable-versioning
+
+		11 | resource "aws_s3_bucket" "financials" {
+		12 |   # bucket is not encrypted
+		13 |   # bucket does not have access logs
+		14 |   # bucket does not have versioning
+		15 |   bucket        = "${local.resource_prefix.value}-financials"
+		16 |   acl           = "private"
+		17 |   force_destroy = true
+		18 | }
+
+Check: CKV_AWS_19: "Ensure all data stored in the S3 bucket is securely encrypted at rest"
+	FAILED for resource: aws_s3_bucket.operations
+	File: /s3.tf:20-29
+	Guide: https://docs.bridgecrew.io/docs/s3_14-data-encrypted-at-rest
+
+		20 | resource "aws_s3_bucket" "operations" {
+		21 |   # bucket is not encrypted
+		22 |   # bucket does not have access logs
+		23 |   bucket = "${local.resource_prefix.value}-operations"
+		24 |   acl    = "private"
+		25 |   versioning {
+		26 |     enabled = true
+		27 |   }
+		28 |   force_destroy = true
+		29 | }
+
+Check: CKV_AWS_18: "Ensure the S3 bucket has access logging enabled"
+	FAILED for resource: aws_s3_bucket.operations
+	File: /s3.tf:20-29
+	Guide: https://docs.bridgecrew.io/docs/s3_13-enable-logging
+
+		20 | resource "aws_s3_bucket" "operations" {
+		21 |   # bucket is not encrypted
+		22 |   # bucket does not have access logs
+		23 |   bucket = "${local.resource_prefix.value}-operations"
+		24 |   acl    = "private"
+		25 |   versioning {
+		26 |     enabled = true
+		27 |   }
+		28 |   force_destroy = true
+		29 | }
+
+Check: CKV_AWS_144: "Ensure that S3 bucket has cross-region replication enabled"
+	FAILED for resource: aws_s3_bucket.operations
+	File: /s3.tf:20-29
+	Guide: https://docs.bridgecrew.io/docs/ensure-that-s3-bucket-has-cross-region-replication-enabled
+
+		20 | resource "aws_s3_bucket" "operations" {
+		21 |   # bucket is not encrypted
+		22 |   # bucket does not have access logs
+		23 |   bucket = "${local.resource_prefix.value}-operations"
+		24 |   acl    = "private"
+		25 |   versioning {
+		26 |     enabled = true
+		27 |   }
+		28 |   force_destroy = true
+		29 | }
+
+Check: CKV_AWS_145: "Ensure that S3 buckets are encrypted with KMS by default"
+	FAILED for resource: aws_s3_bucket.operations
+	File: /s3.tf:20-29
+	Guide: https://docs.bridgecrew.io/docs/ensure-that-s3-buckets-are-encrypted-with-kms-by-default
+
+		20 | resource "aws_s3_bucket" "operations" {
+		21 |   # bucket is not encrypted
+		22 |   # bucket does not have access logs
+		23 |   bucket = "${local.resource_prefix.value}-operations"
+		24 |   acl    = "private"
+		25 |   versioning {
+		26 |     enabled = true
+		27 |   }
+		28 |   force_destroy = true
+		29 | }
+
+Check: CKV_AWS_19: "Ensure all data stored in the S3 bucket is securely encrypted at rest"
+	FAILED for resource: aws_s3_bucket.data_science
+	File: /s3.tf:31-42
+	Guide: https://docs.bridgecrew.io/docs/s3_14-data-encrypted-at-rest
+
+		31 | resource "aws_s3_bucket" "data_science" {
+		32 |   # bucket is not encrypted
+		33 |   bucket = "${local.resource_prefix.value}-data-science"
+		34 |   acl    = "private"
+		35 |   versioning {
+		36 |     enabled = true
+		37 |   }
+		38 |   logging {
+		39 |     target_bucket = "${aws_s3_bucket.logs.id}"
+		40 |     target_prefix = "log/"
+		41 |   }
+		42 | }
+
+Check: CKV_AWS_144: "Ensure that S3 bucket has cross-region replication enabled"
+	FAILED for resource: aws_s3_bucket.data_science
+	File: /s3.tf:31-42
+	Guide: https://docs.bridgecrew.io/docs/ensure-that-s3-bucket-has-cross-region-replication-enabled
+
+		31 | resource "aws_s3_bucket" "data_science" {
+		32 |   # bucket is not encrypted
+		33 |   bucket = "${local.resource_prefix.value}-data-science"
+		34 |   acl    = "private"
+		35 |   versioning {
+		36 |     enabled = true
+		37 |   }
+		38 |   logging {
+		39 |     target_bucket = "${aws_s3_bucket.logs.id}"
+		40 |     target_prefix = "log/"
+		41 |   }
+		42 | }
+
+Check: CKV_AWS_145: "Ensure that S3 buckets are encrypted with KMS by default"
+	FAILED for resource: aws_s3_bucket.data_science
+	File: /s3.tf:31-42
+	Guide: https://docs.bridgecrew.io/docs/ensure-that-s3-buckets-are-encrypted-with-kms-by-default
+
+		31 | resource "aws_s3_bucket" "data_science" {
+		32 |   # bucket is not encrypted
+		33 |   bucket = "${local.resource_prefix.value}-data-science"
+		34 |   acl    = "private"
+		35 |   versioning {
+		36 |     enabled = true
+		37 |   }
+		38 |   logging {
+		39 |     target_bucket = "${aws_s3_bucket.logs.id}"
+		40 |     target_prefix = "log/"
+		41 |   }
+		42 | }
+
+Check: CKV_AWS_19: "Ensure all data stored in the S3 bucket is securely encrypted at rest"
+	FAILED for resource: aws_s3_bucket.logs
+	File: /s3.tf:44-48
+	Guide: https://docs.bridgecrew.io/docs/s3_14-data-encrypted-at-rest
+
+		44 | resource "aws_s3_bucket" "logs" {
+		45 |   bucket = "${local.resource_prefix.value}-logs"
+		46 |   acl    = "log-delivery-write"
+		47 |   force_destroy = true
+		48 | }
+
+Check: CKV_AWS_18: "Ensure the S3 bucket has access logging enabled"
+	FAILED for resource: aws_s3_bucket.logs
+	File: /s3.tf:44-48
+	Guide: https://docs.bridgecrew.io/docs/s3_13-enable-logging
+
+		44 | resource "aws_s3_bucket" "logs" {
+		45 |   bucket = "${local.resource_prefix.value}-logs"
+		46 |   acl    = "log-delivery-write"
+		47 |   force_destroy = true
+		48 | }
+
+Check: CKV_AWS_144: "Ensure that S3 bucket has cross-region replication enabled"
+	FAILED for resource: aws_s3_bucket.logs
+	File: /s3.tf:44-48
+	Guide: https://docs.bridgecrew.io/docs/ensure-that-s3-bucket-has-cross-region-replication-enabled
+
+		44 | resource "aws_s3_bucket" "logs" {
+		45 |   bucket = "${local.resource_prefix.value}-logs"
+		46 |   acl    = "log-delivery-write"
+		47 |   force_destroy = true
+		48 | }
+
+Check: CKV_AWS_145: "Ensure that S3 buckets are encrypted with KMS by default"
+	FAILED for resource: aws_s3_bucket.logs
+	File: /s3.tf:44-48
+	Guide: https://docs.bridgecrew.io/docs/ensure-that-s3-buckets-are-encrypted-with-kms-by-default
+
+		44 | resource "aws_s3_bucket" "logs" {
+		45 |   bucket = "${local.resource_prefix.value}-logs"
+		46 |   acl    = "log-delivery-write"
+		47 |   force_destroy = true
+		48 | }
+
+Check: CKV_AWS_21: "Ensure all data stored in the S3 bucket have versioning enabled"
+	FAILED for resource: aws_s3_bucket.logs
+	File: /s3.tf:44-48
+	Guide: https://docs.bridgecrew.io/docs/s3_16-enable-versioning
+
+		44 | resource "aws_s3_bucket" "logs" {
+		45 |   bucket = "${local.resource_prefix.value}-logs"
+		46 |   acl    = "log-delivery-write"
+		47 |   force_destroy = true
+		48 | }
+
+Check: CKV2_AWS_6: "Ensure that S3 bucket has a Public Access block"
+	FAILED for resource: aws_s3_bucket.data
+	File: /s3.tf:1-9
+	Guide: https://docs.bridgecrew.io/docs/s3-bucket-should-have-public-access-blocks-defaults-to-false-if-the-public-access-block-is-not-attached
+
+		1 | resource "aws_s3_bucket" "data" {
+		2 |   # bucket is public
+		3 |   # bucket is not encrypted
+		4 |   # bucket does not have access logs
+		5 |   # bucket does not have versioning
+		6 |   bucket        = "${local.resource_prefix.value}-data"
+		7 |   acl           = "public-read"
+		8 |   force_destroy = true
+		9 | }
+
+Check: CKV2_AWS_6: "Ensure that S3 bucket has a Public Access block"
+	FAILED for resource: aws_s3_bucket.financials
+	File: /s3.tf:11-18
+	Guide: https://docs.bridgecrew.io/docs/s3-bucket-should-have-public-access-blocks-defaults-to-false-if-the-public-access-block-is-not-attached
+
+		11 | resource "aws_s3_bucket" "financials" {
+		12 |   # bucket is not encrypted
+		13 |   # bucket does not have access logs
+		14 |   # bucket does not have versioning
+		15 |   bucket        = "${local.resource_prefix.value}-financials"
+		16 |   acl           = "private"
+		17 |   force_destroy = true
+		18 | }
+
+Check: CKV2_AWS_6: "Ensure that S3 bucket has a Public Access block"
+	FAILED for resource: aws_s3_bucket.operations
+	File: /s3.tf:20-29
+	Guide: https://docs.bridgecrew.io/docs/s3-bucket-should-have-public-access-blocks-defaults-to-false-if-the-public-access-block-is-not-attached
+
+		20 | resource "aws_s3_bucket" "operations" {
+		21 |   # bucket is not encrypted
+		22 |   # bucket does not have access logs
+		23 |   bucket = "${local.resource_prefix.value}-operations"
+		24 |   acl    = "private"
+		25 |   versioning {
+		26 |     enabled = true
+		27 |   }
+		28 |   force_destroy = true
+		29 | }
+
+Check: CKV2_AWS_6: "Ensure that S3 bucket has a Public Access block"
+	FAILED for resource: aws_s3_bucket.data_science
+	File: /s3.tf:31-42
+	Guide: https://docs.bridgecrew.io/docs/s3-bucket-should-have-public-access-blocks-defaults-to-false-if-the-public-access-block-is-not-attached
+
+		31 | resource "aws_s3_bucket" "data_science" {
+		32 |   # bucket is not encrypted
+		33 |   bucket = "${local.resource_prefix.value}-data-science"
+		34 |   acl    = "private"
+		35 |   versioning {
+		36 |     enabled = true
+		37 |   }
+		38 |   logging {
+		39 |     target_bucket = "${aws_s3_bucket.logs.id}"
+		40 |     target_prefix = "log/"
+		41 |   }
+		42 | }
+
+Check: CKV2_AWS_6: "Ensure that S3 bucket has a Public Access block"
+	FAILED for resource: aws_s3_bucket.logs
+	File: /s3.tf:44-48
+	Guide: https://docs.bridgecrew.io/docs/s3-bucket-should-have-public-access-blocks-defaults-to-false-if-the-public-access-block-is-not-attached
+
+		44 | resource "aws_s3_bucket" "logs" {
+		45 |   bucket = "${local.resource_prefix.value}-logs"
+		46 |   acl    = "log-delivery-write"
+		47 |   force_destroy = true
+		48 | }
+
+

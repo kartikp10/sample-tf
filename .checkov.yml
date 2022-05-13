@@ -1,0 +1,10 @@
+branch: master
+directory:
+- .
+download-external-modules: false
+evaluate-variables: true
+external-checks-dir:
+- policies
+external-modules-download-path: .external_modules
+framework:
+- all
