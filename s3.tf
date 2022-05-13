@@ -36,13 +36,19 @@ resource "aws_s3_bucket" "data_science" {
     enabled = true
   }
   logging {
-    target_bucket = "${aws_s3_bucket.logs.id}"
+    target_bucket = aws_s3_bucket.logs.id
     target_prefix = "log/"
   }
 }
 
 resource "aws_s3_bucket" "logs" {
-  bucket = "${local.resource_prefix.value}-logs"
-  acl    = "log-delivery-write"
+  bucket        = "${local.resource_prefix.value}-logs"
+  acl           = "log-delivery-write"
+  force_destroy = true
+}
+
+resource "aws_s3_bucket" "logs22" {
+  bucket        = "${local.resource_prefix.value}-logs"
+  acl           = "log-delivery-write"
   force_destroy = true
 }
