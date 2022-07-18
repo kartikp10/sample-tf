@@ -33,7 +33,7 @@ resource "aws_security_group" "sg" {
 }
 
 resource "aws_security_group" "sg2" {
-  name        = "sg"
+  name        = "sg2"
   description = "Allow TLS inbound traffic"
   vpc_id      = "vpc-123"
 
