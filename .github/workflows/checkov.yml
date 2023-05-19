@@ -25,3 +25,4 @@ jobs:
         use_enforcement_rules: true
         download_external_modules: true
         output_format: cli
+        check: HIGH
