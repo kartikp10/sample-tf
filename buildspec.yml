@@ -2,7 +2,7 @@ version: 0.2
 env:
   variables:
       BC_SOURCE: "codebuild"
-      PRISMA_API_URL: "https://ui.dev.prismacloud.io"
+      PRISMA_API_URL: "https://api0.prismacloud.io"
   parameter-store:
       BC_API_KEY: "bc-api-key"
 phases:
