@@ -11,13 +11,6 @@ resource "aws_security_group" "sg" {
     cidr_blocks = var.cidrs
   }
 
-  egress {
-    from_port   = 0
-    to_port     = 0
-    protocol    = "-1"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-
   tags = {
     Name                 = "allow_ssh"
     git_commit           = "b829f155d3446ceb1ae6b472df94f23787459f70"
