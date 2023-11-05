@@ -3,14 +3,6 @@ resource "aws_security_group" "sg" {
   description = "Allow TLS inbound traffic"
   vpc_id      = "vpc-123"
 
-  ingress {
-    description = "TLS from VPC"
-    from_port   = var.port
-    to_port     = var.port
-    protocol    = "tcp"
-    cidr_blocks = var.cidrs
-  }
-
   egress {
     from_port   = 0
     to_port     = 0
