@@ -59,3 +59,12 @@ resource "aws_s3_bucket_versioning" "data2" {
     status = "Enabled"
   }
 }
+
+
+resource "aws_s3_bucket_versioning" "data2" {
+  bucket = aws_s3_bucket.data2.id
+
+  versioning_configuration {
+    status = "Enabled"
+  }
+}
